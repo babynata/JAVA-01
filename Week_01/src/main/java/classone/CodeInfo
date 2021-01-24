@@ -1,0 +1,79 @@
+Classfile /Users/natalie/IdeaProject/JAVA-01/Week_01/ByteCodeDemo.class
+  Last modified 2021-1-18; size 427 bytes
+  MD5 checksum b811f62df11dd920ae644458a9c24459
+  Compiled from "ByteCodeDemo.java"
+public class ByteCodeDemo
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#17         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #5.#18         // ByteCodeDemo.a:I
+   #3 = Fieldref           #19.#20        // java/lang/System.out:Ljava/io/PrintStream;
+   #4 = Methodref          #21.#22        // java/io/PrintStream.println:(I)V
+   #5 = Class              #23            // ByteCodeDemo
+   #6 = Class              #24            // java/lang/Object
+   #7 = Utf8               a
+   #8 = Utf8               I
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               add
+  #14 = Utf8               ()I
+  #15 = Utf8               SourceFile
+  #16 = Utf8               ByteCodeDemo.java
+  #17 = NameAndType        #9:#10         // "<init>":()V
+  #18 = NameAndType        #7:#8          // a:I
+  #19 = Class              #25            // java/lang/System
+  #20 = NameAndType        #26:#27        // out:Ljava/io/PrintStream;
+  #21 = Class              #28            // java/io/PrintStream
+  #22 = NameAndType        #29:#30        // println:(I)V
+  #23 = Utf8               ByteCodeDemo
+  #24 = Utf8               java/lang/Object
+  #25 = Utf8               java/lang/System
+  #26 = Utf8               out
+  #27 = Utf8               Ljava/io/PrintStream;
+  #28 = Utf8               java/io/PrintStream
+  #29 = Utf8               println
+  #30 = Utf8               (I)V
+{
+  public ByteCodeDemo();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iconst_1
+         6: putfield      #2                  // Field a:I
+         9: return
+      LineNumberTable:
+        line 1: 0
+        line 3: 4
+
+  public int add(); //方法名
+    descriptor: ()I //方法的描述符
+    flags: ACC_PUBLIC //方法的访问标志
+    Code:  //code开始
+      stack=2, locals=3, args_size=1 //stack：最大栈深度，locals：局部变量数，args_size：参数列表size
+         0: iconst_2 //将一个常量加载到操作数栈
+         1: istore_1 //将一个数值从操作数栈存储到局部变量表
+         2: aload_0 //将一个局部变量加载到操作栈
+         3: getfield      #2                  // Field a:I //引用常量池#2的值
+         6: iload_1
+         7: iadd
+         8: istore_2
+         9: getstatic     #3                  // Field java/lang/System.out:Ljava/io/PrintStream; //获取静态字段System.out，入栈
+        12: iload_2
+        13: invokevirtual #4                  // Method java/io/PrintStream.println:(I)V //用于调用对象的实例方法
+        16: iload_2
+        17: ireturn
+      LineNumberTable:
+        line 6: 0
+        line 7: 2
+        line 8: 9
+        line 9: 16
+}
+SourceFile: "ByteCodeDemo.java"

@@ -1,0 +1,50 @@
+Attaching to process ID 11534, please wait...
+Debugger attached successfully.
+Server compiler detected.
+JVM version is 25.151-b12
+
+using thread-local object allocation.
+Mark Sweep Compact GC //标记-清除GC
+
+Heap Configuration: //堆设置
+   MinHeapFreeRatio         = 40
+   MaxHeapFreeRatio         = 70
+   MaxHeapSize              = 1073741824 (1024.0MB) //堆最大值
+   NewSize                  = 357892096 (341.3125MB) //xmn=MaxHeapSize/3
+   MaxNewSize               = 357892096 (341.3125MB) //xmn=MaxHeapSize/3
+   OldSize                  = 715849728 (682.6875MB) //老年代大小，是新生代的两倍，新生代：老年代=1：2,是堆的2/3
+   NewRatio                 = 2
+   SurvivorRatio            = 8
+   MetaspaceSize            = 21807104 (20.796875MB)
+   CompressedClassSpaceSize = 1073741824 (1024.0MB) //压缩类元信息
+   MaxMetaspaceSize         = 17592186044415 MB //metaspace最大值
+   G1HeapRegionSize         = 0 (0.0MB) G1的region大小
+
+Heap Usage: //堆使用情况
+New Generation (Eden + 1 Survivor Space): //新生代
+   capacity = 322109440 (307.1875MB) //总容量
+   used     = 163297792 (155.73291015625MB) //已使用
+   free     = 158811648 (151.45458984375MB) //未使用
+   50.69636953204476% used //已使用比例
+Eden Space: //eden
+   capacity = 286326784 (273.0625MB)
+   used     = 146650496 (139.8568115234375MB)
+   free     = 139676288 (133.2056884765625MB)
+   51.21787558651865% used
+From Space: //s0
+   capacity = 35782656 (34.125MB)
+   used     = 16647296 (15.8760986328125MB)
+   free     = 19135360 (18.2489013671875MB)
+   46.52336595695971% used
+To Space: //s1
+   capacity = 35782656 (34.125MB)
+   used     = 0 (0.0MB)
+   free     = 35782656 (34.125MB)
+   0.0% used
+tenured generation: //老年代
+   capacity = 715849728 (682.6875MB)
+   used     = 14377592 (13.711540222167969MB)
+   free     = 701472136 (668.975959777832MB)
+   2.008465106240845% used
+
+16044 interned Strings occupying 2156416 bytes.

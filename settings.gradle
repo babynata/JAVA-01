@@ -1,0 +1,4 @@
+rootProject.name = 'JAVA-01'
+include 'Week_01'
+include 'Week_02'
+include 'Week_03'
