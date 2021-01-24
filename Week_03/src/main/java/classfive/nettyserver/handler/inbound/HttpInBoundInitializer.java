@@ -1,4 +1,4 @@
-package classfive.apigateway.handler.inbound;
+package classfive.nettyserver.handler.inbound;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

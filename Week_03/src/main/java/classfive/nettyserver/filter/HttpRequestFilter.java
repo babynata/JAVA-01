@@ -1,4 +1,4 @@
-package classfive.apigateway.filter;
+package classfive.nettyserver.filter;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;

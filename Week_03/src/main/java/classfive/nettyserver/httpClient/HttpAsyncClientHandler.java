@@ -1,6 +1,6 @@
-package classfive.apigateway.httpClient;
+package classfive.nettyserver.httpClient;
 
-import classfive.apigateway.filter.HttpResponseFilter;
+import classfive.nettyserver.filter.HttpResponseFilter;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;

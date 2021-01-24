@@ -1,12 +1,12 @@
-package classfive.apigateway.handler.inbound;
+package classfive.nettyserver.handler.inbound;
 
-import classfive.apigateway.HttpEndPointManager;
-import classfive.apigateway.NamedThreadFactory;
-import classfive.apigateway.filter.HeaderHttpResponseFilter;
-import classfive.apigateway.filter.HttpResponseFilter;
-import classfive.apigateway.httpClient.HttpAsyncClientHandler;
-import classfive.apigateway.router.HttpEndpointRouter;
-import classfive.apigateway.router.RandomHttpEndpointRouter;
+import classfive.nettyserver.HttpEndPointManager;
+import classfive.nettyserver.NamedThreadFactory;
+import classfive.nettyserver.filter.HeaderHttpResponseFilter;
+import classfive.nettyserver.filter.HttpResponseFilter;
+import classfive.nettyserver.httpClient.HttpAsyncClientHandler;
+import classfive.nettyserver.router.HttpEndpointRouter;
+import classfive.nettyserver.router.RandomHttpEndpointRouter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpRequest;

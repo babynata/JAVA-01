@@ -1,6 +1,6 @@
-package classfive.apigateway;
+package classfive.nettyserver;
 
-import classfive.apigateway.handler.inbound.HttpInBoundInitializer;
+import classfive.nettyserver.handler.inbound.HttpInBoundInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.Channel;

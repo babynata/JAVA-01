@@ -1,7 +1,7 @@
-package classfive.apigateway.handler.inbound;
+package classfive.nettyserver.handler.inbound;
 
-import classfive.apigateway.filter.HeaderHttpRequestFilter;
-import classfive.apigateway.filter.HttpRequestFilter;
+import classfive.nettyserver.filter.HeaderHttpRequestFilter;
+import classfive.nettyserver.filter.HttpRequestFilter;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.FullHttpRequest;
