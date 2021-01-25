@@ -38,6 +38,7 @@ public class EndPointRouterHandler extends SimpleChannelInboundHandler<FullHttpR
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) throws Exception {
         final String url = httpEndpointRouter.route(urls);
-        proxyService.submit(() -> httpAsyncClientHandler.get(url, msg, ctx, httpResponseFilter));
+//        proxyService.submit(() -> httpAsyncClientHandler.get(url, msg, ctx, httpResponseFilter));
+        httpAsyncClientHandler.get(url, msg, ctx, httpResponseFilter);
     }
 }
