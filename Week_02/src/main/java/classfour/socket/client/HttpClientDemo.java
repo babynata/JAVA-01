@@ -14,14 +14,17 @@ public class HttpClientDemo {
 
     public static void main(String[] args){
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpGet httpGet = new HttpGet("http://localhost:8801");
-        try(CloseableHttpResponse response = httpClient.execute(httpGet)) {
-            if (response.getStatusLine().getStatusCode() == 200) {
-                String content = new BufferedReader(new InputStreamReader(response.getEntity().getContent())).readLine();
-                System.out.println("content:" + content);
+        HttpGet httpGet = new HttpGet("http://localhost:8803");
+        for (int i = 0; i < 10; i++) {
+            try (CloseableHttpResponse response = httpClient.execute(httpGet)) {
+                if (response.getStatusLine().getStatusCode() == 200) {
+                    String content = new BufferedReader(new InputStreamReader(response.getEntity().getContent())).readLine();
+                    System.out.println("content:" + content);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
     }
 }

@@ -28,7 +28,7 @@ public class HttpServer01{
             printWriter.println("HTTP/1.1 200 OK");
             printWriter.println("Content-type:text/html;charset=utf-8");
             //加上消息长度，才能解析body部分
-            printWriter.println("Content-Length:"+body.length());
+            printWriter.println("Content-Length:"+body.getBytes().length);
             //head和body用空行隔开
             printWriter.println();
             printWriter.println(body);
