@@ -48,7 +48,7 @@ public class HttpAsyncClientHandler {
                 try {
                     String content = new BufferedReader(new InputStreamReader(response.getEntity().getContent())).readLine();
                     FullHttpResponse fullHttpResponse = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, Unpooled.wrappedBuffer(content.getBytes(Charset.forName("utf-8"))));
-                    fullHttpResponse.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html;charset=utf-8");
+                    fullHttpResponse.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/plain;charset=utf-8");
                     fullHttpResponse.headers().setInt(HttpHeaderNames.CONTENT_LENGTH, content.getBytes().length);
 
                     httpResponseFilter.filter(fullHttpResponse, ctx);

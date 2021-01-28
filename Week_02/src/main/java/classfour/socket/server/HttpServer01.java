@@ -24,15 +24,16 @@ public class HttpServer01{
         System.out.println(LocalDateTime.now() + " connected...");
         String body = "hello,nio";
         try {
-            PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
-            printWriter.println("HTTP/1.1 200 OK");
-            printWriter.println("Content-type:text/html;charset=utf-8");
+            PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), false);
+            printWriter.write("HTTP/1.1 200 OK\r\n");
+            printWriter.write("Content-type:text/html;charset=utf-8\r\n");
             //加上消息长度，才能解析body部分
-            printWriter.println("Content-Length:"+body.getBytes().length);
+            printWriter.write("Content-Length:" + body.getBytes().length + "\r\n");
             //head和body用空行隔开
-            printWriter.println();
-            printWriter.println(body);
-            printWriter.close();
+            printWriter.write("\r\n");
+            printWriter.write(body);
+            printWriter.flush();
+//            printWriter.close();
             socket.close();
         } catch (IOException e) {
             e.printStackTrace();
