@@ -1,0 +1,11 @@
+dependencies{
+    compile group: 'org.springframework', name: 'spring-core', version: '4.3.29.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '4.3.29.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aop', version: '4.3.29.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.3.29.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.29.RELEASE'
+    compile group: 'cglib', name: 'cglib', version: '3.2.5'
+    compile group: 'org.javassist', name: 'javassist', version: '3.25.0-GA'
+    compile group: 'dom4j', name: 'dom4j', version: '1.6.1'
+
+}
