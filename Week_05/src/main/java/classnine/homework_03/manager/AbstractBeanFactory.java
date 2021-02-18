@@ -14,6 +14,8 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 
     private Map<String, BaseBeanDefinition> beanDefinitionMap = new HashMap<>();
 
+    private Map<String, Object> beanMap = new HashMap<>();
+
     @Override
     public void registerBean(String name, BaseBeanDefinition beanDefinition) {
         beanDefinitionMap.put(name, beanDefinition);
@@ -21,13 +23,17 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 
     @Override
     public Object getBean(String beanName) {
-        if (beanDefinitionMap.get(beanName) == null) {
-            return null;
+        if (beanMap.get(beanName) == null) {
+            if (beanDefinitionMap.get(beanName) == null) {
+                return null;
+            }
+            GeneralBeanDefinition beanDefinition = (GeneralBeanDefinition) beanDefinitionMap.get(beanName);
+            Class classType = beanDefinition.getClassType();
+            PropertyValue propertyValue = beanDefinition.getPropertyValue();
+            Object proxyObj = getProxyObject(classType, propertyValue);
+            beanMap.put(beanName, proxyObj);
         }
-        GeneralBeanDefinition beanDefinition = (GeneralBeanDefinition) beanDefinitionMap.get(beanName);
-        Class classType = beanDefinition.getClassType();
-        PropertyValue propertyValue = beanDefinition.getPropertyValue();
-        return getProxyObject(classType, propertyValue);
+        return beanMap.get(beanName);
     }
 
     private Object getProxyObject(Class classType, PropertyValue propertyValue) {
