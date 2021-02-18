@@ -1,0 +1,35 @@
+group 'geektime'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin:'maven-publish'
+apply plugin:'maven'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.3.4.RELEASE'
+}
+
+
+def localMavenRepo = 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: localMavenRepo)
+
+            //构造项目的Pom文件
+            pom.project {
+                name = project.name
+                packaging = 'jar'
+                description = 'description'
+            }
+        }
+    }
+}
