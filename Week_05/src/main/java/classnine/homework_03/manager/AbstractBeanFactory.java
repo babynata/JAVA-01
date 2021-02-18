@@ -25,7 +25,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
     public Object getBean(String beanName) {
         if (beanMap.get(beanName) == null) {
             if (beanDefinitionMap.get(beanName) == null) {
-                return null;
+                throw new RuntimeException("no bean definition was found");
             }
             GeneralBeanDefinition beanDefinition = (GeneralBeanDefinition) beanDefinitionMap.get(beanName);
             Class classType = beanDefinition.getClassType();
