@@ -1,7 +1,8 @@
-package classten.entity;
+package classten.homework_03.entity;
 
 
 import lombok.Data;
+
 import mystarter.entity.Klass;
 import mystarter.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;

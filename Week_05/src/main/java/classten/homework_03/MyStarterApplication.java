@@ -1,6 +1,7 @@
-package classten;
+package classten.homework_03;
 
-import classten.entity.ISchool;
+
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
