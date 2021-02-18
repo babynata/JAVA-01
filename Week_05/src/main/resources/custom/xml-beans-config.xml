@@ -1,0 +1,13 @@
+<beans>
+    <bean id="student123"
+          class="classnine.homework_03.entity.Student">
+        <property name="id" value="123" />
+        <property name="name" value="KK123" />
+    </bean>
+
+    <bean id="student100"
+          class="classnine.homework_03.entity.Student">
+        <property name="id" value="100" />
+        <property name="name" value="KK100" />
+    </bean>
+</beans>
