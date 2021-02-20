@@ -1,7 +1,7 @@
-package classnine.homework_03.manager;
+package classnine.mybeanfactory.manager;
 
-import classnine.homework_03.config.PropertyValue;
-import classnine.homework_03.manager.impl.GeneralBeanDefinition;
+import classnine.mybeanfactory.config.PropertyValue;
+import classnine.mybeanfactory.manager.impl.GeneralBeanDefinition;
 import net.sf.cglib.beans.BeanGenerator;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.ReflectionUtils;

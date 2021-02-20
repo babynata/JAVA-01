@@ -1,7 +1,7 @@
-package classnine.homework_03.manager.impl;
+package classnine.mybeanfactory.manager.impl;
 
-import classnine.homework_03.config.PropertyValue;
-import classnine.homework_03.manager.BaseBeanDefinition;
+import classnine.mybeanfactory.config.PropertyValue;
+import classnine.mybeanfactory.manager.BaseBeanDefinition;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

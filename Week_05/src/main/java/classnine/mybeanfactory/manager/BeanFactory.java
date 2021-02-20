@@ -1,4 +1,4 @@
-package classnine.homework_03.manager;
+package classnine.mybeanfactory.manager;
 
 public interface BeanFactory {
 

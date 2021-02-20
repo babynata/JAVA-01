@@ -14,5 +14,7 @@ dependencies{
     compile group: 'dom4j', name: 'dom4j', version: '1.6.1'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.3.4.RELEASE'
     compile group: 'geektime', name: 'MyStarter', version: '1.0-SNAPSHOT'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.197'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '5.2.12.RELEASE'
     testCompile group: 'org.springframework', name: 'spring-test', version: '5.2.9.RELEASE'
 }

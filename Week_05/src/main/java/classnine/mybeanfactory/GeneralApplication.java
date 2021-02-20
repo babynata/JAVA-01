@@ -1,8 +1,8 @@
-package classnine.homework_03;
+package classnine.mybeanfactory;
 
-import classnine.homework_03.entity.Student;
-import classnine.homework_03.manager.BeanFactory;
-import classnine.homework_03.manager.impl.XmlBeanFactory;
+import classnine.mybeanfactory.entity.Student;
+import classnine.mybeanfactory.manager.BeanFactory;
+import classnine.mybeanfactory.manager.impl.XmlBeanFactory;
 
 public class GeneralApplication {
 
@@ -11,5 +11,8 @@ public class GeneralApplication {
         Student student123 = (Student) xmlBeanFactory.getBean("student123");
         student123.init();
         System.out.println(student123.toString());
+        Student student100 = (Student) xmlBeanFactory.getBean("student100");
+        student100.init();
+        System.out.println(student100.toString());
     }
 }

@@ -1,4 +1,4 @@
-package classnine.homework_03.config;
+package classnine.mybeanfactory.config;
 
 import lombok.Data;
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mybeans="http://www.babynata.com/schema/mybeans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.babynata.com/schema/mybeans http://www.babynata.com/schema/mybeans.xsd">
+
+    <mybeans:student id="student100" idNo="1" name="Nata"/>
+    <mybeans:klass id="klassA">
+        <property name="students">
+            <list>
+                <ref bean="student100" />
+            </list>
+        </property>
+    </mybeans:klass>
+</beans>

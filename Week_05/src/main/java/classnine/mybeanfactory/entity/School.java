@@ -1,4 +1,4 @@
-package classnine.homework_03.entity;
+package classnine.mybeanfactory.entity;
 
 import classnine.aop.entity.ISchool;
 import lombok.Data;

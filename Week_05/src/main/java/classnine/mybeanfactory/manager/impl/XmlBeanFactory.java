@@ -1,7 +1,7 @@
-package classnine.homework_03.manager.impl;
+package classnine.mybeanfactory.manager.impl;
 
-import classnine.homework_03.config.PropertyValue;
-import classnine.homework_03.manager.AbstractBeanFactory;
+import classnine.mybeanfactory.config.PropertyValue;
+import classnine.mybeanfactory.manager.AbstractBeanFactory;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
