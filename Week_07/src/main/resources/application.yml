@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    master:
+      jdbc-url: jdbc:mysql://1.15.41.74:3316/java01?useSSL=false
+      username: root
+      password: 12345
+      driver-class-name: com.mysql.jdbc.Driver
+    slave1:
+      jdbc-url: jdbc:mysql://1.15.41.74:3326/java01?useSSL=false
+      username: root
+      password: 12345
+      driver-class-name: com.mysql.jdbc.Driver
