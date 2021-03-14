@@ -19,8 +19,8 @@ public class OrderServiceImplTest extends BaseTest {
     @Test
     public void add() {
         OrderDTO orderDTO = new OrderDTO();
-        orderDTO.setOrderId(2);
-        orderDTO.setUserId(2);
+        orderDTO.setOrderId(3);
+        orderDTO.setUserId(3);
         orderDTO.setExpressId("e_000001");
         orderDTO.setOrderDate(LocalDateTime.now());
         orderDTO.setStatus(0);
